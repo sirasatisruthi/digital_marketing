@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: digital-marketing-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: digital-marketing
+
+  template:
+    metadata:
+      labels:
+        app: digital-marketing
+
+    spec:
+      containers:
+      - name: digital-marketing
+
+        image: sruthi9sirasati/digital-marketing:latest
+
+        ports:
+        - containerPort: 80
