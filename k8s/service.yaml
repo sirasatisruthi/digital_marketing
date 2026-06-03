@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: digital-marketing-service
+
+spec:
+  selector:
+    app: digital-marketing
+
+  type: LoadBalancer
+
+  ports:
+  - port: 80
+    targetPort: 80
